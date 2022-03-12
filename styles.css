@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0d192b;
+}
+
+.main {
+  width: 22rem;
+  height: 40rem;
+  background-color: #14253d;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.main .mainImg {
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.main .mainImg div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #00fff7;
+  opacity: .50;
+  z-index: 1;
+  display: none;
+}
+
+.main .mainImg img:nth-child(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  display: none;
+}
+
+.main .mainImg img:nth-child(3) {
+  width: 100%;
+  height: 100%;
+}
+
+.main .mainHeader {
+  color: white;
+  font-size: 150%;
+  font-weight: 700;
+}
+
+.main .mainDescription {
+  color: #8bacda;
+}
+
+.main .mainValue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .mainValue .mainPrice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  color: #00fff7;
+}
+
+.main .mainValue .mainExpire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 0.5rem;
+          column-gap: 0.5rem;
+  color: #8bacda;
+}
+
+.main .mainValue .mainExpire img {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.main hr {
+  border-color: #2f415b;
+}
+
+.main .mainFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  color: #8bacda;
+}
+
+.main .mainFooter img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.main .mainFooter span {
+  color: white;
+}
+
+@media only screen and (min-width: 550px) {
+  .mainImg:hover > img:nth-child(2), .mainImg:hover > div {
+    display: block;
+    cursor: pointer;
+  }
+  .mainHeader:hover {
+    color: #00fff7;
+    cursor: pointer;
+  }
+  .mainFooter span:hover {
+    color: #00fff7;
+    cursor: pointer;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

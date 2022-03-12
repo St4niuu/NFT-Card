@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+// VARIABLES
+    $soft-blue: hsl(215, 51%, 70%);
+    $cyan: hsl(178, 100%, 50%);
+    $main-bg: hsl(217, 54%, 11%);
+    $card-bg: hsl(216, 50%, 16%);
+    $line: hsl(215, 32%, 27%);
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-bg;
+}
+.main
+{
+    width: 22rem;
+    height: 40rem;
+    background-color: $card-bg;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    padding: 1.5rem;
+    .mainImg
+    {
+        overflow: hidden;
+        border-radius: 10px;
+        position: relative;
+        div
+        {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $cyan;
+            opacity: .50;
+            z-index: 1;
+            display: none;
+        }
+        img:nth-child(2)
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            display: none;
+        }
+        img:nth-child(3)
+        {   
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .mainHeader
+    {
+        color: white;
+        font-size: 150%;
+        font-weight: 700;
+    }
+    .mainDescription
+    {
+        color: $soft-blue;
+    }
+    .mainValue
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .mainPrice
+        {
+            display: flex;
+            align-items: center;
+            column-gap: 0.5rem;
+            color: $cyan;
+        }
+        .mainExpire
+        {
+            display: flex;
+            align-items: center;
+            column-gap: 0.5rem;
+            color: $soft-blue;
+            img
+            {
+                width: 1.3rem;
+                height: 1.3rem;
+            }
+        }
+    }
+    hr
+    {
+        border-color: $line;
+    }
+    .mainFooter
+    {
+        display: flex;
+        align-items: center;
+        column-gap: 1.5rem;
+        color: $soft-blue;
+        img
+        {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border: 1px solid white;
+        }
+        span
+        {
+            color: white;
+        }
+    }
+}
+@media only screen and (min-width: 550px)
+{
+    .mainImg:hover > img:nth-child(2), .mainImg:hover > div
+    {
+        display: block;
+        cursor: pointer;
+    }
+    .mainHeader:hover
+    {
+        color: $cyan;
+        cursor: pointer;
+    }
+    .mainFooter
+    {
+        span:hover
+        {
+            color: $cyan;
+            cursor: pointer;
+        }
+    }
+}
